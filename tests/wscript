@@ -113,7 +113,7 @@ def build(bld):
         )
 
         bld(
-            pytest_source=test,
+            tests=test,
             features="pytest",
             use=pytarget,
             ut_str="${PYTEST} -q ${SRC} " + junit_option(test),
@@ -121,7 +121,7 @@ def build(bld):
 
     for test in bld.path.ant_glob("*_unit_test.py"):
         bld(
-            pytest_source=test,
+            tests=test,
             features="pytest",
             use="genpybind",
             ut_str="${PYTEST} -q ${SRC} " + junit_option(test),
