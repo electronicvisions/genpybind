@@ -38,7 +38,7 @@ def configure(cfg):
         mandatory=True,
         header_name="pybind11/pybind11.h",
         cxxflags="-std=c++17",
-        includes=cfg.options.pybind11_includes,
+        includes=None and (not cfg.options.pybind11_includes) or cfg.options.pybind11_includes,
     )
 
     cfg.find_program(

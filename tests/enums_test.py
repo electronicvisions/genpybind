@@ -28,9 +28,10 @@ def test_scoped_enum():
     assert m.test_enum(m.Color.red) == "red"
     assert m.test_enum(m.Color.green) == "green"
     assert m.test_enum(m.Color.blue) == "blue"
+    assert m.test_enum(m.Color.red) == "red"
 
-    with pytest.raises(TypeError):
-        m.Color.blue == 0 # pylint: disable=pointless-statement
+    # scoped enums will *NOT* accept ==/!= int comparisons => Will always return False
+    assert m.Color.red != 2
 
     with pytest.raises(AttributeError):
         m.blue # pylint: disable=pointless-statement

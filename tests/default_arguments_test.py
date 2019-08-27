@@ -4,13 +4,15 @@ import pydefault_arguments as m
 @pytest.mark.parametrize("variant", [
     "builtin",
     "class",
-    "braced",
     "class_in_namespace",
-    "braced_in_namespace",
-    "template_in_namespace",
+    "class_in_namespace_with_parameter",
     "class_outside_namespace",
-    "braced_outside_namespace",
+    "class_outside_namespace_with_parameter",
+    "template_in_namespace",
     "template_outside_namespace",
+    "braced",
+    "braced_in_namespace",
+    "braced_outside_namespace",
 ])
 def test_default_arguments(variant):
     # TODO: braced initialization not supported in default argument
