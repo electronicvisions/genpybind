@@ -111,15 +111,40 @@ def fully_qualified_expression(cursor):
     output = []
     current = [""]  # type: List[Union[Text, Token]]
     for token in get_tokens_with_whitespace(cursor):
-        # FIXME: Handle leading token.spelling == "::"
         if token.kind == TokenKind.IDENTIFIER:
-            if utils.is_string(current[0]):
+            if token.cursor.kind == CursorKind.NAMESPACE_REF:
+                # FIXME: we should keep namespaces if a DECL_REF_EXPR follows?
+                continue
+            if utils.is_string(current[0]) and len(current[0]) == 0:
                 output.append(current)
                 current = [token]
+                continue
             else:
+                assert token.cursor.kind in [CursorKind.TYPE_REF, CursorKind.DECL_REF_EXPR], "{} ({}) is not in [TYPE_REF, DECL_REF_EXPR]!".format(token.spelling, token.cursor.kind)
+                if token.cursor.kind == CursorKind.DECL_REF_EXPR:
+                    current.append('::' + token.spelling)
+                    continue
+                elif token.cursor.kind == CursorKind.TYPE_REF:
+                    current.append(token.cursor.type.fully_qualified_name)
+                    continue
+                else:
+                    assert False
+        elif token.kind == TokenKind.PUNCTUATION:
+            if token.spelling in '(){}':
+                # parenthesis...
                 current.append(token.spelling)
-        else:
+                continue
+            if token.cursor.kind == CursorKind.CALL_EXPR:
+                # sometimes :: ?
+                continue
+            if token.cursor.kind == CursorKind.DECL_REF_EXPR:
+                # mostly :: ?
+                continue
+        elif token.kind in [TokenKind.LITERAL] or token.cursor.kind in [CursorKind.CXX_BOOL_LITERAL_EXPR]:
             current.append(token.spelling)
+            continue
+        else:
+            assert False, "{} ({}) not expected".format(token.spelling, token.cursor.kind)
     output.append(current)
 
     for tokens in output:

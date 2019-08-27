@@ -1,5 +1,7 @@
 #pragma once
 
+#include "genpybind.h"
+
 #if !__has_include("optional")
 #include <experimental/optional>
 namespace std {
@@ -11,7 +13,5 @@ using std::experimental::nullopt;
 #else
 #include <optional>
 #endif
-
-#include "genpybind.h"
 
 std::optional<int> GENPYBIND(visible) foo(std::optional<int> o = std::nullopt);
