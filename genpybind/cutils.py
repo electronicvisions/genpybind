@@ -117,7 +117,11 @@ def fully_qualified_expression(cursor):
                 output.append(current)
                 current = [token]
             else:
-                current.append(token.spelling)
+                if token.cursor.type.kind == TypeKind.RECORD:
+                    # classes/structs should be written in fully qualified form
+                    current.append(fully_qualified_name(token))
+                else:
+                    current.append(token.spelling)
         else:
             current.append(token.spelling)
     output.append(current)
