@@ -198,14 +198,13 @@ class Operator(Callable):
         _typedef_name = registry.register(self.cursor, self)
 
         # TODO: Add support for call policies
-        # TODO: Handle "r" variant of operators
 
         argument_types = self._argument_types()
 
-        yield "{parent}.def({args});".format(
+        yield "".join(["{parent}.def({args});\n".format(
             parent=parent,
             args=join_arguments(
-                quote("__{}__".format(names[0])),
+                quote("__{}__".format(name)),
                 "[]({args}) {{ return {expr}; }}".format(
                     args=join_arguments(
                         "{} {}& {}".format(
@@ -218,4 +217,4 @@ class Operator(Callable):
                 quote(self.cursor.brief_comment),
                 "py::is_operator()",
             )
-        )
+        ) for name in names])
