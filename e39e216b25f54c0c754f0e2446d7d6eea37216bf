@@ -22,6 +22,30 @@
       "revId": "e39e216b25f54c0c754f0e2446d7d6eea37216bf",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69bb8355_a57a2f97",
+        "filename": "genpybind/decls/operators.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-09-16T21:32:36Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "7fcfcbb2_3189a842",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 44
+      },
+      "revId": "e39e216b25f54c0c754f0e2446d7d6eea37216bf",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
     }
   ]
 }
