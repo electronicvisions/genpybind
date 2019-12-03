@@ -1,0 +1,39 @@
+@Library("jenlib") _
+
+runOnSlave(label: "frontend") {
+	wafSetup(projects: ["genpybind"])
+}
+
+stage("Build & Test") {
+	onSlurmResource([partition: "jenkins", "cpus-per-task": 8]) {
+		dir("genpybind") {
+			inSingularity(app: "visionary-dls") {
+				jesh "./waf configure build"
+			}
+		}
+	}
+}
+
+stage("Test Evaluation") {
+	runOnSlave(label: "frontend") {
+		String xmlResultPattern = "/build/tests/reports/*.xml"
+
+		// Always keep the plain results
+		archiveArtifacts xmlResultPattern
+
+		// Parse test results
+		step([$class       : 'XUnitBuilder',
+		      thresholdMode: 1,
+		      thresholds   : [[$class           : 'FailedThreshold',
+		                       unstableThreshold: '0'],
+		      ],
+		      tools        : [[$class               : 'GoogleTestType',
+		                       deleteOutputFiles    : true,
+		                       failIfNotNew         : true,
+		                       pattern              : xmlResultPattern,
+		                       skipNoTestFiles      : false,
+		                       stopProcessingIfError: true]
+		      ]
+		])
+	}
+}
