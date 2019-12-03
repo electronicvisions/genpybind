@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3d6ce46f_cda1b25e",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-03T14:41:40Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "123b14b8_a4134c24",
+      "revId": "87e1d59765d17d6f6f862e33dae9f90785440586",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "70fb3705_3b4ea717",
         "filename": ".ci/Jenkinsfile",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2019-12-03T10:24:07Z",
       "side": 1,
       "message": "local waf?",
+      "revId": "87e1d59765d17d6f6f862e33dae9f90785440586",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ed32f29_dbdace7f",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-03T14:41:40Z",
+      "side": 1,
+      "message": "Ack, our waf was too painfull, i.e. full rewrite of the tests/wscript would have been necessary and in addition magically failing tests occur.",
+      "parentUuid": "70fb3705_3b4ea717",
       "revId": "87e1d59765d17d6f6f862e33dae9f90785440586",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
