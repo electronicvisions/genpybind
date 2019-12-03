@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "123b14b8_a4134c24",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-12-03T10:24:07Z",
+      "side": 1,
+      "message": "I think we should loop over all the apps that use it (i.e. dls AND wafer)",
+      "revId": "87e1d59765d17d6f6f862e33dae9f90785440586",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "70fb3705_3b4ea717",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-12-03T10:24:07Z",
+      "side": 1,
+      "message": "local waf?",
+      "revId": "87e1d59765d17d6f6f862e33dae9f90785440586",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
