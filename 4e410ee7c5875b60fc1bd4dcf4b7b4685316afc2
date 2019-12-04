@@ -1,0 +1,164 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bb26b369_62416dc3",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-04T16:33:10Z",
+      "side": 1,
+      "message": "all of this should be inside a try/catch for nightly failure notifications",
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b610cd8e_0992508d",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-04T16:33:10Z",
+      "side": 1,
+      "message": "reference issue?",
+      "range": {
+        "startLine": 14,
+        "startChar": 11,
+        "endLine": 14,
+        "endChar": 16
+      },
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "462ab826_cee756dc",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-04T16:33:10Z",
+      "side": 1,
+      "message": "also call \u0027install\u0027 somewhere (for doc maybe, or just to make sure it does not throw)",
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "907d52ce_dfeb5b33",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-04T16:33:10Z",
+      "side": 1,
+      "message": "x",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 1
+      },
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d1ad002c_c7473692",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-04T16:33:10Z",
+      "side": 1,
+      "message": "x",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 1
+      },
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "22dbc35a_f11f566a",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-04T16:33:10Z",
+      "side": 1,
+      "message": "nightly notify if not stable missing",
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3eb9ec00_69c178bf",
+        "filename": "tests/enums_test.py",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-04T16:33:10Z",
+      "side": 1,
+      "message": "Reference (upstream?) issue?\n\nUsually we unittest.skip(\"Issue ####\") tests if they are broken.",
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8d51bb3c_bee50919",
+        "filename": "tests/enums_test.py",
+        "patchSetId": 12
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-04T16:33:10Z",
+      "side": 1,
+      "message": "real change or debug?",
+      "range": {
+        "startLine": 34,
+        "startChar": 22,
+        "endLine": 34,
+        "endChar": 23
+      },
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
