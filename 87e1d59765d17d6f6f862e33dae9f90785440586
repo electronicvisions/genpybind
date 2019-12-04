@@ -105,6 +105,24 @@
       "revId": "87e1d59765d17d6f6f862e33dae9f90785440586",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "59840899_06e620a6",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-04T20:01:16Z",
+      "side": 1,
+      "message": "Hm not sure if we really want to enforce our version of the tool here. We should not be confused that it is (by chance) the same tool than the one we use. E.g. in gcc we also don\u0027t enforce to use waf based build flow but use the configure/make based build flow which is provided by upstream.",
+      "parentUuid": "a8f919b0_7ecefa02",
+      "revId": "87e1d59765d17d6f6f862e33dae9f90785440586",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
     }
   ]
 }

@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "696845e4_874b518a",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-04T20:01:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "bb26b369_62416dc3",
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b610cd8e_0992508d",
         "filename": ".ci/Jenkinsfile",
         "patchSetId": 12
@@ -30,6 +48,30 @@
       "writtenOn": "2019-12-04T16:33:10Z",
       "side": 1,
       "message": "reference issue?",
+      "range": {
+        "startLine": 14,
+        "startChar": 11,
+        "endLine": 14,
+        "endChar": 16
+      },
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d20ceacc_2dd3c39f",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-04T20:01:16Z",
+      "side": 1,
+      "message": "see other comment",
+      "parentUuid": "b610cd8e_0992508d",
       "range": {
         "startLine": 14,
         "startChar": 11,
@@ -59,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "d95bafa8_8a219333",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-04T20:01:16Z",
+      "side": 1,
+      "message": "I could call install with a specific prefix, because this waf tries to install to /usr/... by default. -\u003e used PREFIX to install to ./install",
+      "parentUuid": "462ab826_cee756dc",
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "907d52ce_dfeb5b33",
         "filename": ".ci/Jenkinsfile",
         "patchSetId": 12
@@ -79,6 +139,30 @@
       "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b94b556a_058e122e",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-04T20:01:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "907d52ce_dfeb5b33",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 1
+      },
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
     },
     {
       "key": {
@@ -105,6 +189,30 @@
     },
     {
       "key": {
+        "uuid": "9973074c_68cd8fbe",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-04T20:01:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d1ad002c_c7473692",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 1
+      },
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "22dbc35a_f11f566a",
         "filename": ".ci/Jenkinsfile",
         "patchSetId": 12
@@ -119,6 +227,24 @@
       "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4975e4d_f3b18638",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-04T20:01:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "22dbc35a_f11f566a",
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
     },
     {
       "key": {
@@ -139,6 +265,24 @@
     },
     {
       "key": {
+        "uuid": "66addb17_416f777f",
+        "filename": "tests/enums_test.py",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-04T20:01:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3eb9ec00_69c178bf",
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8d51bb3c_bee50919",
         "filename": "tests/enums_test.py",
         "patchSetId": 12
@@ -150,6 +294,30 @@
       "writtenOn": "2019-12-04T16:33:10Z",
       "side": 1,
       "message": "real change or debug?",
+      "range": {
+        "startLine": 34,
+        "startChar": 22,
+        "endLine": 34,
+        "endChar": 23
+      },
+      "revId": "4e410ee7c5875b60fc1bd4dcf4b7b4685316afc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1713cf2e_c3d1a1f6",
+        "filename": "tests/enums_test.py",
+        "patchSetId": 12
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2019-12-04T20:01:16Z",
+      "side": 1,
+      "message": "real change, since they don\u0027t enforce throwing behavior for \u003d\u003d and !\u003d anymore but only for the other comparison operators.",
+      "parentUuid": "8d51bb3c_bee50919",
       "range": {
         "startLine": 34,
         "startChar": 22,
