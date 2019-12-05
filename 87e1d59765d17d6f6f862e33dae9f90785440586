@@ -123,6 +123,24 @@
       "revId": "87e1d59765d17d6f6f862e33dae9f90785440586",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb492db5_531c5321",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-05T09:37:18Z",
+      "side": 1,
+      "message": "ACK, but only as long as we don\u0027t build pybind11 in every project (but keep the container-deployed version).",
+      "parentUuid": "59840899_06e620a6",
+      "revId": "87e1d59765d17d6f6f862e33dae9f90785440586",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
     }
   ]
 }
