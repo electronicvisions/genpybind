@@ -22,6 +22,30 @@
       "revId": "349ec1389d2077022aa57207b8b44bc4d0bf4e90",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "41cf388a_c3f97aec",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 13
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2019-12-06T09:29:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ca285ffa_e83d55dc",
+      "range": {
+        "startLine": 48,
+        "startChar": 2,
+        "endLine": 53,
+        "endChar": 1
+      },
+      "revId": "349ec1389d2077022aa57207b8b44bc4d0bf4e90",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
     }
   ]
 }
