@@ -24,6 +24,10 @@ def expose_as(
 ):
     # type: (...) -> Text
     tpl = textwrap.dedent("""
+    #ifndef __GENPYBIND_GENERATED__
+    #define __GENPYBIND_GENERATED__
+    #endif
+
     #include <sstream>
     #include <pybind11/pybind11.h>
     #include <pybind11/stl.h>
