@@ -24,6 +24,7 @@ def main():
     parser.add_argument("--genpybind-isystem", nargs="+", dest="isystem")
     parser.add_argument("--genpybind-tag", nargs="+", dest="tags")
     parser.add_argument("--genpybind-from-ast", dest="from_ast")
+    parser.add_argument("--genpybind-output-files", dest="output_files", required=True)
     parser.add_argument('rest', nargs=argparse.REMAINDER)
 
     # args, rest_args = parser.parse_known_args()
@@ -58,11 +59,12 @@ def main():
 
     toplevel_declarations = gather_declarations(translation_unit.cursor)
 
-    print(expose_as(
+    expose_as(
         toplevel_declarations,
         module=args.module,
         doc=args.docstring,
         isystem=args.isystem,
         includes=args.includes,
         tags=args.tags,
-    ))
+        output_files=args.output_files.split(','),
+    )
