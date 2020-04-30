@@ -43,6 +43,15 @@ def generate_genpybind_source(self):
     out = "genpybind-%s.%d.cpp" % (module, self.idx)
     out = self.path.get_bld().find_or_declare(out)
 
+    num_files = 10
+
+    out = []
+
+    for i in range(num_files):
+        # create temporary source file in build directory to hold generated code
+        single_out = "genpybind-%s-%d.%d.cpp" % (module, i, self.idx)
+        out.append(self.path.get_bld().find_or_declare(single_out))
+
     task = self.create_task("genpybind", self.to_nodes(self.source), out)
     # used to detect whether CFLAGS or CXXFLAGS should be passed to genpybind
     task.features = self.features
@@ -58,7 +67,7 @@ def generate_genpybind_source(self):
 
     # Tell waf to compile/link the generated code instead of the headers
     # originally passed-in via the `source` parameter. (see `process_source`)
-    self.source = [out]
+    self.source = out
 
 
 class genpybind(Task.Task): # pylint: disable=invalid-name
@@ -82,16 +91,7 @@ class genpybind(Task.Task): # pylint: disable=invalid-name
             genpybind_parse=self.genpybind_parse,
             resource_dir=self.find_resource_dir())
 
-        output = self.run_genpybind(args)
-
-        # For debugging / log output
-        pasteable_command = join_args(args)
-
-        # write generated code to file in build directory
-        # (will be compiled during process_source stage)
-        (output_node,) = self.outputs
-        output_node.write("// {}\n{}\n".format(
-            pasteable_command.replace("\n", "\n// "), output))
+        self.run_genpybind(args)
 
     def find_genpybind(self):
         return self.env.PYTHON + ["-m", "genpybind"]
@@ -171,6 +171,7 @@ class genpybind(Task.Task): # pylint: disable=invalid-name
 
         # options for genpybind
         args.extend(["--genpybind-module", self.module])
+        args.extend(["--genpybind-output-files", ",".join(o.abspath() for o in self.outputs)])
         if self.genpybind_tags:
             args.extend(["--genpybind-tag"] + self.genpybind_tags)
         if relative_includes:
