@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "473bd480_2891e99a",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-04-30T10:38:00Z",
+      "side": 1,
+      "message": "Avoid the lookup by index (valid here because I recon statements is rather large).\n\n```\nfor i, lines in enumerate(s.split(\u0027\\n\u0027) for s in statements):\n```",
+      "range": {
+        "startLine": 113,
+        "startChar": 4,
+        "endLine": 114,
+        "endChar": 41
+      },
+      "revId": "7eae5e9e57d57e45566678b2158e6eb13aad1be0",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a98128d5_6ea1d8e0",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-04-30T10:38:00Z",
+      "side": 1,
+      "message": "functions\u003d\"\\n\".join(functions)",
+      "range": {
+        "startLine": 135,
+        "startChar": 28,
+        "endLine": 135,
+        "endChar": 62
+      },
+      "revId": "7eae5e9e57d57e45566678b2158e6eb13aad1be0",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "86520639_3ee2964d",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-04-30T10:38:00Z",
+      "side": 1,
+      "message": "statements",
+      "range": {
+        "startLine": 136,
+        "startChar": 101,
+        "endLine": 136,
+        "endChar": 138
+      },
+      "revId": "7eae5e9e57d57e45566678b2158e6eb13aad1be0",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
