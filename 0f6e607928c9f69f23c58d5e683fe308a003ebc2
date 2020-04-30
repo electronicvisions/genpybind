@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "71262f92_81e40cf6",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-04-30T12:31:50Z",
+      "side": 1,
+      "message": "Try to avoid accessing by index.",
+      "range": {
+        "startLine": 116,
+        "startChar": 7,
+        "endLine": 116,
+        "endChar": 13
+      },
+      "revId": "0f6e607928c9f69f23c58d5e683fe308a003ebc2",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
