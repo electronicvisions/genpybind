@@ -6,17 +6,17 @@ template <typename T, int N> struct Tpl {};
 
 struct GENPYBIND(visible) X {};
 
-void GENPYBIND(visible) function_builtin(int x = 5, bool arg = true) {}
-void GENPYBIND(visible) function_class(X x = X()) {}
+inline void GENPYBIND(visible) function_builtin(int x = 5, bool arg = true) {}
+inline void GENPYBIND(visible) function_class(X x = X()) {}
 
 namespace example {
 struct GENPYBIND(visible) Y {
   static constexpr int N = 42;
 };
-void GENPYBIND(visible) function_class_in_namespace(Y y = Y()) {}
+inline void GENPYBIND(visible) function_class_in_namespace(Y y = Y()) {}
 } // namespace example
 
-void GENPYBIND(visible)
+inline void GENPYBIND(visible)
     function_class_outside_namespace(example::Y y = example::Y()) {}
 
 // TODO: genpybind uses `example::Y::N` as default argument?
