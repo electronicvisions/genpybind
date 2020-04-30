@@ -16,6 +16,24 @@
       "revId": "2791ac7822cdd39c823c9fb467ca699286b7d341",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "024d808a_7c2e27fb",
+        "filename": "genpybind/tool.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-04-30T14:43:20Z",
+      "side": 1,
+      "message": "Would also be nice to support --genpybind-output-format\u003d\"my_output_file_%d.cpp\" and `--genpybind-num-output-files\u003d10` and then the format gets used - similar to `split`-command etc",
+      "parentUuid": "eef2f2fe_7f7c3bcd",
+      "revId": "2791ac7822cdd39c823c9fb467ca699286b7d341",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
     }
   ]
 }
