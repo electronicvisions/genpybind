@@ -9,28 +9,28 @@ struct GENPYBIND(visible) Something {
 
   /// \brief A member function!
   /// More documentation here.
-  void do_something() {}
+  inline void do_something() {}
 
   /// \brief A comparison operator!
   /// More documentation here.
-  bool operator==(Something const &/*other*/) const { return true; }
+  inline bool operator==(Something const &/*other*/) const { return true; }
 
   /// \brief Inline friend!
   /// More documentation here.
-  friend bool operator!=(Something const &/*lhs*/, Something const &/*rhs*/) {
+  inline friend bool operator!=(Something const &/*lhs*/, Something const &/*rhs*/) {
     return false;
   }
 
-  friend bool operator<(Something const &lhs, Something const &rhs);
+  inline friend bool operator<(Something const &lhs, Something const &rhs);
 };
 
 /// \brief Less than!
 /// More documentation here.
-bool operator<(Something const & /*lhs*/, Something const & /*rhs*/) {
+inline bool operator<(Something const & /*lhs*/, Something const & /*rhs*/) {
   return false;
 }
 
 /// \brief A free function!
 /// More documentation here.
 GENPYBIND(visible)
-void some_function() {}
+inline void some_function() {}
