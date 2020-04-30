@@ -50,6 +50,8 @@ def expose_as(
         return py::reinterpret_borrow<py::object>((PyObject*)tinfo->type);
     }}
 
+    {functions}
+
     PYBIND11_MODULE({module}, {var}) {{
     {var}.doc() = {doc};
     {statements}
@@ -59,9 +61,12 @@ def expose_as(
     var = "m"
     registry = Registry(tags=tags)
 
+    toplevel_index = 0
     statements = []  # type: List[Text]
     pending_declarations = []  # type: List[Tuple[Declaration, Text]]
     postamble_declarations = []  # type: List[Tuple[Declaration, Text]]
+    functions = []
+    functions_prefix= []
 
     def handle_return(declaration, value, postamble_only=False):
         # type: (Declaration, Union[None, Text, Tuple[Declaration, Text]], bool) -> None
@@ -89,6 +94,11 @@ def expose_as(
     for declaration in toplevel_declarations:
         for value in utils.flatten(declaration.expose(var, registry)):
             handle_return(declaration, value)
+        function = "\n".join(s for s in statements)
+        functions_prefix.append("void function_{}(py::module& m)".format(toplevel_index))
+        functions.append(function)
+        toplevel_index += 1
+        statements = []
 
     while pending_declarations:
         declaration, parent = pending_declarations.pop(0)
@@ -100,6 +110,21 @@ def expose_as(
         for value in utils.flatten(declaration.expose_later(var, parent, registry)):
             handle_return(declaration, value, postamble_only=True)
 
+    for i in range(len(statements)):
+        lines = statements[i].split('\n')
+        for line in lines:
+            global_type = line.split('.')[0]
+            if global_type.startswith("genpybind"):
+                for f in range(len(functions)):
+                    if functions[f].find(global_type) != -1:
+                        print("/* {} */".format(line))
+                        functions[f] = functions[f] + "\n" + line + "\n"
+                        lines.remove(line)
+        statements[i] = "\n".join(lines)
+
+    for i in range(toplevel_index):
+        functions[i] = functions_prefix[i] + "\n{\nstatic_cast<void>(m);\n" + functions[i] + "\n}\n"
+
     return tpl.format(
         module=module,
         name=quote(module),
@@ -107,5 +132,6 @@ def expose_as(
         isystem="\n".join('#include <{}>'.format(f) for f in isystem or []),
         includes="\n".join('#include {}'.format(quote(f)) for f in includes or []),
         var=var,
-        statements="\n".join(statement for statement in statements),
+        functions="\n".join(function for function in functions),
+        statements="\n".join("function_{}(m);".format(i) for i in range(toplevel_index)) + "\n".join(statement for statement in statements),
     )
