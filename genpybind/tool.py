@@ -31,6 +31,8 @@ def main():
                         help="generate bindings for tagged parts; otherwise tagged parts will be omitted from binding generation")
     parser.add_argument("--genpybind-from-ast", dest="from_ast",
                         help="read from already generated abstract syntax tree instead of calling genpybind-parse")
+    parser.add_argument("--genpybind-output-files", dest="output_files", required=True,
+                        help="write to comma-seperated list of output files")
     parser.add_argument('rest', nargs=argparse.REMAINDER,
                         help="arguments to genpybind-parse; also including compiler flags for the regular processing of the translation unit corresponding to the header file")
 
@@ -66,11 +68,12 @@ def main():
 
     toplevel_declarations = gather_declarations(translation_unit.cursor)
 
-    print(expose_as(
+    expose_as(
         toplevel_declarations,
         module=args.module,
         doc=args.docstring,
         isystem=args.isystem,
         includes=args.includes,
         tags=args.tags,
-    ))
+        output_files=args.output_files.split(','),
+    )
