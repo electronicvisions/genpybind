@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "0e909c9a_3ac9244b",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2020-05-01T18:57:57Z",
+      "side": 1,
+      "message": "variation in linecound between the files",
+      "parentUuid": "dc1dae9f_d7a6f210",
+      "range": {
+        "startLine": 198,
+        "startChar": 46,
+        "endLine": 198,
+        "endChar": 56
+      },
+      "revId": "c2fc19dbee5ed2aba68f65d8cca905f215def61a",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9cf30a49_8b3c6abb",
         "filename": "genpybind/expose.py",
         "patchSetId": 13
