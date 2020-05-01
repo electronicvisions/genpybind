@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87506d84_7071f884",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-05-01T18:03:44Z",
+      "side": 1,
+      "message": "this comment is very lonely and would like to have some friends",
+      "range": {
+        "startLine": 198,
+        "startChar": 0,
+        "endLine": 198,
+        "endChar": 88
+      },
+      "revId": "c2fc19dbee5ed2aba68f65d8cca905f215def61a",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dc1dae9f_d7a6f210",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-05-01T18:03:44Z",
+      "side": 1,
+      "message": "what exactly is \"difference\"?",
+      "range": {
+        "startLine": 198,
+        "startChar": 46,
+        "endLine": 198,
+        "endChar": 56
+      },
+      "revId": "c2fc19dbee5ed2aba68f65d8cca905f215def61a",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9cf30a49_8b3c6abb",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-05-01T18:03:44Z",
+      "side": 1,
+      "message": "map(list, zip(*sorted(zip(functions_linecounts, functions))))",
+      "range": {
+        "startLine": 200,
+        "startChar": 38,
+        "endLine": 200,
+        "endChar": 107
+      },
+      "revId": "c2fc19dbee5ed2aba68f65d8cca905f215def61a",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
