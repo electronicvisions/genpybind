@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4fe7904a_e66a5000",
+        "filename": ".ci/Jenkinsfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2020-05-01T14:48:53Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 4,
+        "startChar": 91,
+        "endLine": 4,
+        "endChar": 92
+      },
+      "revId": "f3e5a030a8ee7c2078944e1255dd87df01c18f85",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
