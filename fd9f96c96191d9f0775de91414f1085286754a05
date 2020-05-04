@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2f2159d4_d987376b",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 15
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-05-04T11:44:48Z",
+      "side": 1,
+      "message": "`f.count(\u0027\\n\u0027)` does not allocate any temporary structures that are immediately deleted",
+      "range": {
+        "startLine": 207,
+        "startChar": 28,
+        "endLine": 207,
+        "endChar": 46
+      },
+      "revId": "fd9f96c96191d9f0775de91414f1085286754a05",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
