@@ -22,6 +22,29 @@
       "revId": "fd9f96c96191d9f0775de91414f1085286754a05",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1a2596de_d5ddac68",
+        "filename": "genpybind/tool.py",
+        "patchSetId": 15
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-05-05T13:55:25Z",
+      "side": 1,
+      "message": "Do we really want to require this argument? This _will_ break everyone\u0027s workflow.\n\nWouldn\u0027t it be easier to fall back to the old behavior if --genpybind-output-files was not provided?",
+      "range": {
+        "startLine": 34,
+        "startChar": 73,
+        "endLine": 34,
+        "endChar": 86
+      },
+      "revId": "fd9f96c96191d9f0775de91414f1085286754a05",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
     }
   ]
 }
