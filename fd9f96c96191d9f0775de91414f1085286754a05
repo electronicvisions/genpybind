@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "15967660_70e6e7e3",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 15
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-05-15T14:22:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f2159d4_d987376b",
+      "range": {
+        "startLine": 207,
+        "startChar": 28,
+        "endLine": 207,
+        "endChar": 46
+      },
+      "revId": "fd9f96c96191d9f0775de91414f1085286754a05",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a2596de_d5ddac68",
         "filename": "genpybind/tool.py",
         "patchSetId": 15
@@ -36,6 +60,30 @@
       "writtenOn": "2020-05-05T13:55:25Z",
       "side": 1,
       "message": "Do we really want to require this argument? This _will_ break everyone\u0027s workflow.\n\nWouldn\u0027t it be easier to fall back to the old behavior if --genpybind-output-files was not provided?",
+      "range": {
+        "startLine": 34,
+        "startChar": 73,
+        "endLine": 34,
+        "endChar": 86
+      },
+      "revId": "fd9f96c96191d9f0775de91414f1085286754a05",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77b4ea50_257dd9e1",
+        "filename": "genpybind/tool.py",
+        "patchSetId": 15
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-05-15T14:22:49Z",
+      "side": 1,
+      "message": "Since we have the compatibility built into waf now (c/10611), let\u0027s keep this as is and re-evaluate when pushing upstream.",
+      "parentUuid": "1a2596de_d5ddac68",
       "range": {
         "startLine": 34,
         "startChar": 73,
