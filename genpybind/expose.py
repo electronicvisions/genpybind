@@ -162,7 +162,7 @@ def expose_as(
             # find definition
             if line.startswith("auto {}".format(name)):
                 args = line.split('=')[1].split('(')[1].split(')')[0].split(', ')
-                if args[0] == 'm':
+                if args[0] == var:
                     # found outmost parent
                     return [args[1]] + parent_names
                 else:
@@ -185,7 +185,7 @@ def expose_as(
                     # attr can't be reordered, make it use the module to get the object
                     parent_names = find_recursive_attribute(name, ("\n".join(functions)).split("\n"))
                     split = line.split('.')
-                    split[0] = "m" + "".join([".attr({})".format(attr) for attr in parent_names])
+                    split[0] = var + "".join([".attr({})".format(attr) for attr in parent_names])
                     remaining_lines.append(".".join(split))
                 else:
                     found = False
@@ -220,16 +220,17 @@ def expose_as(
     for m, name in zip(modules, module_names):
         for f in range(len(functions)):
             if functions[f].find(m) != -1:
-                functions[f] = "auto {} = static_cast<py::module>(m.attr(\"{}\"));\n".format(
-                    m, name) + functions[f]
+                functions[f] = "auto {} = static_cast<py::module>({}.attr(\"{}\"));\n".format(
+                    m, var, name) + functions[f]
 
 
-    function_def = "void function_{}(py::module& m)\n{{\n{}\n}}\n"
+    function_def = "void function_{}(py::module& {})\n{{\n{}\n}}\n"
     function_decl = "void function_{}(py::module&);"
-    function_call = "function_{}(m);"
+    function_call = "function_{}({});"
 
-    functions = [function_def.format(i, functions[i]) for i in range(len(functions))]
-    remaining_statements = [function_call.format(i) for i in range(len(functions))] + remaining_statements
+    functions = [function_def.format(i, var, functions[i]) for i in range(len(functions))]
+    remaining_statements = [function_call.format(i, var) for i in range(len(functions))] + \
+        remaining_statements
     function_declarations = [function_decl.format(i) for i in range(len(functions))]
 
     # split functions such that the linecount-difference is smaller than max(linecounts)
