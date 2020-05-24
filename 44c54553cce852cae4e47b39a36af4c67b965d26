@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4557b205_5b1a4095",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-05-24T15:10:43Z",
+      "side": 1,
+      "message": "Still needs testing but avoids extended full-string-searching.\n\n```\nmodules_per_function \u003d []\nModule \u003d collections.namedtuple(\"Module\", [\"name\", \"module\"])\n\ndef create_filter(idx):\n    modules_per_function.append(set())\n    def filter_extract_module(line):\n        \"Append module line and return whether to keep line in original function\"\n        if line.startswith(\"py::module\"):\n            module \u003d Module(module\u003d(line.split(\u0027 \u0027)[1],\n                            names\u003d(line.split(\u0027\"\u0027)[1])\n            module_per_function[-1].add(module)\n            module_definitions.append(line)\n            return False\n        else:\n            return True\n    return filter_extract_module\nfunction_lines \u003d (func.split(\u0027\\n\u0027) for func in functions)\nfunction_lines \u003d (filter(create_filter(i), func) for i, func in enumerate(function_lines))\n\nfor func, module in zip(function_lines, modules):\n    for m in module:\n        func.insert(0, \"auto {} \u003d static_cast\u003cpy::module\u003e(m.attr(\\\"{}\\\"));\\n\".format(m.module, m.name))\nfunctions \u003d [\"\\n\".join(func) for func in function_lines]\n```",
+      "range": {
+        "startLine": 208,
+        "startChar": 0,
+        "endLine": 225,
+        "endChar": 0
+      },
+      "revId": "44c54553cce852cae4e47b39a36af4c67b965d26",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
