@@ -203,6 +203,27 @@ def expose_as(
 
     functions = [functions[i] + "\n" + functions_appends[i] for i in range(len(functions))]
 
+    # find undefined py::module uses
+    # first find all module definitions, record and remove them
+    modules = []
+    module_names = []
+    module_definitions = []
+    for f in range(len(functions)):
+        for line in functions[f].split('\n'):
+            if line.startswith("py::module"):
+                modules.append(line.split(' ')[1])
+                module_names.append(line.split('"')[1])
+                module_definitions.append(line)
+                functions[f] = functions[f].replace(line, "")
+
+    # prepend dynamic acquisition of used but not defined module
+    for m, name in zip(modules, module_names):
+        for f in range(len(functions)):
+            if functions[f].find(m) != -1:
+                functions[f] = "auto {} = static_cast<py::module>(m.attr(\"{}\"));\n".format(
+                    m, name) + functions[f]
+
+
     function_def = "void function_{}(py::module& m)\n{{\n{}\n}}\n"
     function_decl = "void function_{}(py::module&);"
     function_call = "function_{}(m);"
@@ -223,6 +244,9 @@ def expose_as(
         split_functions_linecounts[to_index] += function_linecount
     # sort split_functions in order to have PYBIND11_MODULE in first file with minimal line count
     split_functions_linecounts, split_functions = map(list, zip(*sorted(zip(split_functions_linecounts, split_functions))))
+
+    # prepend remaining statements with module definitions
+    remaining_statements = module_definitions + remaining_statements
 
     print(tpl.format(
         module=module,
