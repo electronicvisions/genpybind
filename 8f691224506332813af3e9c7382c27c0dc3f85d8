@@ -16,6 +16,24 @@
       "revId": "8f691224506332813af3e9c7382c27c0dc3f85d8",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cec0dbfa_7cbfcdfd",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2020-05-25T15:22:03Z",
+      "side": 1,
+      "message": "Right, I implemented first and looked afterwards, what is actually needed as formatting, will use `+`",
+      "parentUuid": "1e0e98ea_929c33e0",
+      "revId": "8f691224506332813af3e9c7382c27c0dc3f85d8",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
     }
   ]
 }
