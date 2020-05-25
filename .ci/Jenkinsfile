@@ -1,8 +1,7 @@
 @Library("jenlib") _
 
 apps = ["visionary-dls",
-        // "visionary-wafer" // disabled because current HEAD is not py2 compatible anymore 
-       ]
+        "visionary-wafer"]
 
 try {
 	runOnSlave(label: "frontend") {
