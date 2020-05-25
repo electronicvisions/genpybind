@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
+from __future__ import print_function
 
 import textwrap
-
 
 from . import utils
 from .registry import Registry
@@ -56,8 +56,8 @@ def expose_as(
         if (!tinfo) {{
             std::string name = tp.name();
             py::detail::clean_type_id(name);
-            PyErr_WarnFormat(PyExc_Warning, /*stack_level=*/7,
-                             "Reference to unknown type '%s'", name.c_str());
+            std::string const msg = "Reference to unknown type '" + name + "'";
+            PyErr_WarnEx(PyExc_Warning, msg.c_str(), /*stack_level*/7);
             return pybind11::none();
         }}
         return py::reinterpret_borrow<py::object>((PyObject *)tinfo->type);
@@ -96,12 +96,20 @@ def expose_as(
         }}
     }};
 
+    // If `T` is registered with pybind11 the corresponding Python type is returned.
+    // Else a warning is emitted and None is returned.
     template <typename T>
-    inline py::object genpybind_get_type_object()
-    {{
-        auto tinfo = py::detail::get_type_info(
-            typeid(T), /*throw_if_missing=*/true);
-        return py::reinterpret_borrow<py::object>((PyObject*)tinfo->type);
+    py::object genpybind_get_type_object() {{
+        std::type_info const &tp = typeid(T);
+        auto tinfo = py::detail::get_type_info(tp, /*throw_if_missing=*/false);
+        if (!tinfo) {{
+            std::string name = tp.name();
+            py::detail::clean_type_id(name);
+            std::string msg = "Reference to unknown type '" + name + "'";
+            PyErr_WarnEx(PyExc_Warning, msg.c_str(), /*stack_level*/7);
+            return pybind11::none();
+        }}
+        return py::reinterpret_borrow<py::object>((PyObject *)tinfo->type);
     }}
 
     {functions}
