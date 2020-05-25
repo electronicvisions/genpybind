@@ -1,7 +1,8 @@
 from __future__ import unicode_literals
+from __future__ import print_function
 
 import textwrap
-
+import sys
 
 from . import utils
 from .registry import Registry
@@ -23,6 +24,36 @@ def expose_as(
         tags=None,  # type: Optional[List[Text]]
 ):
     # type: (...) -> Text
+    get_type_object = ""
+    if sys.version_info.major == 2:
+        get_type_object = textwrap.dedent("""
+        template <typename T>
+        py::object genpybind_get_type_object()
+        {
+            auto tinfo = py::detail::get_type_info(
+                typeid(T), /*throw_if_missing=*/true);
+            return py::reinterpret_borrow<py::object>((PyObject*)tinfo->type);
+        }
+        """).strip()
+    else:
+        get_type_object = textwrap.dedent("""
+        // If `T` is registered with pybind11 the corresponding Python type is returned.
+        // Else a warning is emitted and None is returned.
+        template <typename T>
+        py::object genpybind_get_type_object() {
+            std::type_info const &tp = typeid(T);
+            auto tinfo = py::detail::get_type_info(tp, /*throw_if_missing=*/false);
+            if (!tinfo) {
+                std::string name = tp.name();
+                py::detail::clean_type_id(name);
+                PyErr_WarnFormat(PyExc_Warning, /*stack_level=*/7,
+                                 "Reference to unknown type '%s'", name.c_str());
+                return pybind11::none();
+            }
+            return py::reinterpret_borrow<py::object>((PyObject *)tinfo->type);
+        }
+        """).strip()
+
     tpl = textwrap.dedent("""
     #ifndef __GENPYBIND_GENERATED__
     #define __GENPYBIND_GENERATED__
@@ -47,21 +78,7 @@ def expose_as(
         }}
     }};
 
-    // If `T` is registered with pybind11 the corresponding Python type is returned.
-    // Else a warning is emitted and None is returned.
-    template <typename T>
-    py::object genpybind_get_type_object() {{
-        std::type_info const &tp = typeid(T);
-        auto tinfo = py::detail::get_type_info(tp, /*throw_if_missing=*/false);
-        if (!tinfo) {{
-            std::string name = tp.name();
-            py::detail::clean_type_id(name);
-            PyErr_WarnFormat(PyExc_Warning, /*stack_level=*/7,
-                             "Reference to unknown type '%s'", name.c_str());
-            return pybind11::none();
-        }}
-        return py::reinterpret_borrow<py::object>((PyObject *)tinfo->type);
-    }}
+    {get_type_object}
 
     {functions}
     {function_declarations}
@@ -96,13 +113,7 @@ def expose_as(
         }}
     }};
 
-    template <typename T>
-    inline py::object genpybind_get_type_object()
-    {{
-        auto tinfo = py::detail::get_type_info(
-            typeid(T), /*throw_if_missing=*/true);
-        return py::reinterpret_borrow<py::object>((PyObject*)tinfo->type);
-    }}
+    {get_type_object}
 
     {functions}
     """).strip()
@@ -255,6 +266,7 @@ def expose_as(
         doc=quote(doc),
         isystem="\n".join('#include <{}>'.format(f) for f in isystem or []),
         includes="\n".join('#include {}'.format(quote(f)) for f in includes or []),
+        get_type_object=get_type_object,
         var=var,
         functions="\n".join(split_functions[0]),
         function_declarations="\n".join(function_declarations),
@@ -263,6 +275,7 @@ def expose_as(
 
     for i, output_file in enumerate(output_files[1:]):
         print(split_tpl.format(
+            get_type_object=get_type_object,
             isystem="\n".join('#include <{}>'.format(f) for f in isystem or []),
             includes="\n".join('#include {}'.format(quote(f)) for f in includes or []),
             functions="\n".join(split_functions[i + 1])
