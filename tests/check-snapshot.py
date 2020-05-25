@@ -14,34 +14,40 @@ RE_TRAILING_WHITESPACE = re.compile("[ \t]*$", re.M)
 
 
 class StablePlainTextDoc(pydoc.TextDoc):
-    def bold(self, text: str) -> str:
+    def bold(self, text):
+        # type: (str) -> str
         return text
 
-    def section(self, title: str, contents: str) -> str:
+    def section(self, title, contents):
+        # type: (str, str) -> str
         if title in ["FILE"]:
             return ""
         return super().section(title, contents)
 
-    def document(self, *args: Any, **kwargs: Any) -> str:
+    def document(self, *args, **kwargs):
+        # type: (*Any, **Any) -> str
         text: str = super().document(*args, **kwargs)
         text = RE_MEMORY_ADDRESS.sub("", text)
         text = RE_TRAILING_WHITESPACE.sub("", text)
         return text
 
 
-def describe(target_name: str) -> str:
+def describe(target_name):
+    # type: (str) -> str
     module_name = "py" + target_name
     module = importlib.import_module(module_name)
     return StablePlainTextDoc().document(module)
 
 
-def load_expected_description(artifact_path: Path) -> Optional[str]:
+def load_expected_description(artifact_path):
+    # type: (Path) -> Optional[str]
     if not artifact_path.is_file():
         return None
     return artifact_path.read_text(encoding="utf-8")
 
 
 def main() -> None:
+    # type: () -> None
     parser = argparse.ArgumentParser()
     parser.add_argument("header", type=Path)
     parser.add_argument("artifact", type=Path)
