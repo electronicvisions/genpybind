@@ -34,6 +34,24 @@
       "revId": "8f691224506332813af3e9c7382c27c0dc3f85d8",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "daf7b82e_c05a085e",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2020-05-25T15:24:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cec0dbfa_7cbfcdfd",
+      "revId": "8f691224506332813af3e9c7382c27c0dc3f85d8",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
     }
   ]
 }
