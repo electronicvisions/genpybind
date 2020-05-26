@@ -1,4 +1,5 @@
 import os
+import sys
 
 import pytest
 
@@ -12,10 +13,11 @@ def test_warning_emitted_during_import_of_module():
     # Alias is broken due to missing import:
     assert m.alias is None
 
-    # The correct line in this file is reported as the location of the warning.
-    assert len(recorder) == 1
-    warning = recorder[0]
-    assert os.path.samefile(warning.filename, __file__)
-    with open(__file__) as f:
-        line = f.readlines()[warning.lineno - 1].strip()
-    assert line == "import pytypedefs_across_modules_missing_include as m"
+    if sys.version_info.major > 2:
+        # The correct line in this file is reported as the location of the warning.
+        assert len(recorder) == 1
+        warning = recorder[0]
+        assert os.path.samefile(warning.filename, __file__)
+        with open(__file__) as f:
+            line = f.readlines()[warning.lineno - 1].strip()
+        assert line == "import pytypedefs_across_modules_missing_include as m"
