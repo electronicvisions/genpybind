@@ -22,6 +22,30 @@
       "revId": "44c54553cce852cae4e47b39a36af4c67b965d26",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d00fb471_bcfc41dc",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2020-05-26T11:09:06Z",
+      "side": 1,
+      "message": "We need the two iterations because we fist have to get all defined modules and then check in _all_ functions again if it is used",
+      "parentUuid": "4557b205_5b1a4095",
+      "range": {
+        "startLine": 208,
+        "startChar": 0,
+        "endLine": 225,
+        "endChar": 0
+      },
+      "revId": "44c54553cce852cae4e47b39a36af4c67b965d26",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
     }
   ]
 }
