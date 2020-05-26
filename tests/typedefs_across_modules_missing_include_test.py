@@ -1,8 +1,20 @@
 import os
+import sys
 
 import pytest
 
 
+def test_warning_emitted_during_import_of_module_without_location():
+    text = "Reference to unknown type 'definition::Definition'"
+    with pytest.warns(Warning, match=text) as recorder:
+        # pylint: disable=import-outside-toplevel
+        import pytypedefs_across_modules_missing_include as m
+
+    # Alias is broken due to missing import:
+    assert m.alias is None
+
+@unittest.skipIf(sys.version_info.major < 3,
+    "Emmitted warning with correct file reporting only works for python3")
 def test_warning_emitted_during_import_of_module():
     text = "Reference to unknown type 'definition::Definition'"
     with pytest.warns(Warning, match=text) as recorder:
