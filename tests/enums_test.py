@@ -1,3 +1,4 @@
+import sys
 import pytest
 import pyenums as m
 
@@ -48,13 +49,16 @@ def test_scoped_enum():
     #  with pytest.raises(TypeError, match="incompatible function arguments"):
         #  "uiae" == m.Color.blue # pylint: disable=pointless-statement,misplaced-comparison-constant
 
+    assert not hasattr(m, "blue")
+
+    if sys.version_info.major < 3:
+        pytest.skip("scoped enum comparison test only works for python3")
+
     with pytest.raises(TypeError, match="not supported between instances of"):
         m.Color.blue < 0 # pylint: disable=pointless-statement
 
     with pytest.raises(TypeError, match="not supported between instances of"):
         0 < m.Color.blue # pylint: disable=pointless-statement,misplaced-comparison-constant
-
-    assert not hasattr(m, "blue")
 
 def test_export_values():
     assert m.EnumerationFromScoped == m.ScopedButExportValues.EnumerationFromScoped

@@ -1,4 +1,5 @@
 import os
+import sys
 
 import pytest
 
@@ -11,6 +12,9 @@ def test_warning_emitted_during_import_of_module():
 
     # Alias is broken due to missing import:
     assert m.alias is None
+
+    if sys.version_info.major < 3:
+        pytest.skip("Emmitted warning with correct file reporting only works for python3")
 
     # The correct line in this file is reported as the location of the warning.
     assert len(recorder) == 1

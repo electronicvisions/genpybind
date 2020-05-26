@@ -136,20 +136,23 @@ def build(bld):
             ut_str="${PYTEST} -q ${SRC} " + junit_option(test),
         )
 
-        # There can optionally be a version-dependent snapshot file.
-        snapshot = node.parent.find_node(
-            "expected/{0}.py{1}.txt".format(target, bld.env.PYTHON_VERSION)
-        ) or node.parent.make_node("expected/{0}.txt".format(target))
-        if not snapshot.exists():
-            snapshot.write("")
+        if sys.version_info.major > 2:
+            # There can optionally be a version-dependent snapshot file.
+            snapshot = node.parent.find_node(
+                "expected/{0}.py{1}.txt".format(target, bld.env.PYTHON_VERSION)
+            ) or node.parent.make_node("expected/{0}.txt".format(target))
+            if not snapshot.exists():
+                snapshot.write("")
 
-        bld(
-            pytest_source=[header, snapshot],
-            features="pytest",
-            use=pytarget,
-            run_after=run_after,
-            ut_str=check_snapshot_command,
-        )
+            bld(
+                pytest_source=[header, snapshot],
+                features="pytest",
+                use=pytarget,
+                run_after=run_after,
+                ut_str=check_snapshot_command,
+            )
+        else:
+            Logs.pprint('RED', "WARNING: snapshot tests are skipped for python2.")
 
     for test in bld.path.ant_glob("*_unit_test.py"):
         bld(
