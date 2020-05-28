@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e978b9d2_c585421c",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000015
+      },
+      "writtenOn": "2020-05-28T08:47:01Z",
+      "side": 0,
+      "message": "ws only",
+      "revId": "bb98bdf95402b8d779dd2efd961d9655b10ca526",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
