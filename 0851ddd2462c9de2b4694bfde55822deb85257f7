@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "44fc749c_988155e5",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2020-06-02T13:27:44Z",
+      "side": 1,
+      "message": "The PyErr_WarnFormat is a new feature from python 3.2 onward, the PyErr_Warn is the same except the formatting and exists also for python2",
+      "parentUuid": "643c289d_cf7ff854",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 71
+      },
+      "revId": "0851ddd2462c9de2b4694bfde55822deb85257f7",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b62f1dc5_a4b95c0d",
         "filename": "genpybind/expose.py",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2020-06-02T13:26:05Z",
       "side": 1,
       "message": "Why a change in behavior?",
+      "range": {
+        "startLine": 101,
+        "startChar": 6,
+        "endLine": 101,
+        "endChar": 54
+      },
+      "revId": "0851ddd2462c9de2b4694bfde55822deb85257f7",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7acaa79e_df9ecf92",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2020-06-02T13:27:44Z",
+      "side": 1,
+      "message": "I think this second template was created before the upstream merge and therefore the code was the old version. I just updated this one to be the same as above",
+      "parentUuid": "b62f1dc5_a4b95c0d",
       "range": {
         "startLine": 101,
         "startChar": 6,
