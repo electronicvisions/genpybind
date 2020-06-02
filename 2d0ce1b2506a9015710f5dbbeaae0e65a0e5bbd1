@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9c007c9e_88a52c72",
+        "filename": "tests/enums_test.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-06-02T12:39:46Z",
+      "side": 1,
+      "message": "print a SKIP-warning that tests are not run?",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 34
+      },
+      "revId": "2d0ce1b2506a9015710f5dbbeaae0e65a0e5bbd1",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fbefdcc5_03193927",
+        "filename": "tests/typedefs_across_modules_missing_include_test.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-06-02T12:39:46Z",
+      "side": 1,
+      "message": "same comment regarding SKIP-message",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 34
+      },
+      "revId": "2d0ce1b2506a9015710f5dbbeaae0e65a0e5bbd1",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7b61e403_f2aef373",
+        "filename": "tests/wscript",
+        "patchSetId": 11
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-06-02T12:39:46Z",
+      "side": 1,
+      "message": "maybe print the warning here? should be easiest",
+      "range": {
+        "startLine": 139,
+        "startChar": 0,
+        "endLine": 139,
+        "endChar": 38
+      },
+      "revId": "2d0ce1b2506a9015710f5dbbeaae0e65a0e5bbd1",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
