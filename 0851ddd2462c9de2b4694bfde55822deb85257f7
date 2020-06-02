@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "643c289d_cf7ff854",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-06-02T13:26:05Z",
+      "side": 1,
+      "message": "I just trust you that this is the version agnostic code if the tests pass.",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 71
+      },
+      "revId": "0851ddd2462c9de2b4694bfde55822deb85257f7",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b62f1dc5_a4b95c0d",
+        "filename": "genpybind/expose.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-06-02T13:26:05Z",
+      "side": 1,
+      "message": "Why a change in behavior?",
+      "range": {
+        "startLine": 101,
+        "startChar": 6,
+        "endLine": 101,
+        "endChar": 54
+      },
+      "revId": "0851ddd2462c9de2b4694bfde55822deb85257f7",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
