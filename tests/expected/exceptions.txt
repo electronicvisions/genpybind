@@ -1,0 +1,58 @@
+NAME
+    pyexceptions
+
+CLASSES
+    pybind11_builtins.pybind11_object(builtins.object)
+        my_exception
+        my_thrower
+
+    class my_exception(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      my_exception
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __init__(...)
+     |      __init__(*args, **kwargs)
+     |      Overloaded function.
+     |
+     |      1. __init__(self: pyexceptions.my_exception, msg: str) -> None
+     |
+     |      2. __init__(self: pyexceptions.my_exception, arg0: pyexceptions.my_exception) -> None
+     |
+     |  what(...)
+     |      what(self: pyexceptions.my_exception) -> str
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from pybind11_builtins.pybind11_object:
+     |
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+    class my_thrower(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      my_thrower
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __init__(...)
+     |      __init__(*args, **kwargs)
+     |      Overloaded function.
+     |
+     |      1. __init__(self: pyexceptions.my_thrower) -> None
+     |
+     |      2. __init__(self: pyexceptions.my_thrower, arg0: pyexceptions.my_thrower) -> None
+     |
+     |  my_throw(...)
+     |      my_throw(self: pyexceptions.my_thrower) -> None
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from pybind11_builtins.pybind11_object:
+     |
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
