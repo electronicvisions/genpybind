@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e27a0bc8_e0b438af",
+        "filename": "tests/default_arguments.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-06-26T11:25:14Z",
+      "side": 1,
+      "message": "can we also get a C++11-style enum test?",
+      "revId": "0f4690e9d4982cab955ad85563db95e6b40f73ee",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
