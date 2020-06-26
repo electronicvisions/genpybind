@@ -1,0 +1,32 @@
+NAME
+    pyexplicit_template_class
+
+CLASSES
+    pybind11_builtins.pybind11_object(builtins.object)
+        Klass_int
+
+    class Klass_int(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      Klass_int
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __init__(...)
+     |      __init__(*args, **kwargs)
+     |      Overloaded function.
+     |
+     |      1. __init__(self: pyexplicit_template_class.Klass_int) -> None
+     |
+     |      2. __init__(self: pyexplicit_template_class.Klass_int, arg0: pyexplicit_template_class.Klass_int) -> None
+     |
+     |  echo(...)
+     |      echo(self: pyexplicit_template_class.Klass_int, t: int) -> int
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from pybind11_builtins.pybind11_object:
+     |
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
