@@ -19,6 +19,19 @@ inline void GENPYBIND(visible) function_class_in_namespace(Y y = Y()) {}
 inline void GENPYBIND(visible)
     function_class_outside_namespace(example::Y y = example::Y()) {}
 
+struct GENPYBIND(visible) mode {
+	 enum type { FOO, BAR };
+};
+
+template<typename T>
+class Klass {
+public:
+	T echo(T t, mode::type = mode::FOO) {return t;}
+};
+
+template class Klass<int>;
+GENPYBIND(opaque) typedef Klass<int> Klass_int;
+
 // TODO: genpybind uses `example::Y::N` as default argument?
 /*
 void GENPYBIND(visible) function_template_outside_namespace(

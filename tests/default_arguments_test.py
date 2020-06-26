@@ -24,3 +24,7 @@ def test_default_arguments(variant):
         pytest.skip("not implemented")
     fun = getattr(m, "function_{}".format(variant))
     fun()
+
+def test_Klass_else():
+    k = m.Klass_int()
+    assert 3 == k.echo(3)
