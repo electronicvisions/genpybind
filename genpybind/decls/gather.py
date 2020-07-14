@@ -63,6 +63,14 @@ def gather_declarations(cursor, default_visibility=False):
         # For function templates we explicitly request all template instantiations
         # and add them to the queue.
         if cursor.kind == CursorKind.FUNCTION_TEMPLATE:
+
+            # default arguments missing in instantiating below -> collect here
+            default_arguments = []
+            for child in cutils.children_by_kind(cursor, CursorKind.PARM_DECL):
+                expr = next(cutils.children_by_kind(child, cutils.EXPRESSION_KINDS), None)
+                if expr:
+                    default_arguments.append(cutils.fully_qualified_expression(expr, cursor.semantic_parent))
+
             for child in cursor.get_children(
                     with_implicit=True, with_template_instantiations=True):
                 if child.kind in [
@@ -71,6 +79,9 @@ def gather_declarations(cursor, default_visibility=False):
                         CursorKind.CXX_METHOD,
                         CursorKind.FUNCTION_DECL,
                 ]:
+                    # augment with default arguments if any
+                    if default_arguments:
+                        child.default_arguments = default_arguments
                     queue.append((parent_declarations, child, default_visibility))
             continue
 
