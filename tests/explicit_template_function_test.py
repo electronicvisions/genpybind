@@ -32,3 +32,15 @@ def test_constructor():
     assert obj.value == 0
     obj = m.Something(123)
     assert obj.value == 123
+
+def test_echo_with_default_argument():
+    val = m.echo_with_default_argument()
+    assert val == 3
+    val = m.echo_with_default_argument(42)
+    assert val == 42
+
+def test_echo_with_default_argument_2():
+    val = m.echo_with_default_argument_2()
+    assert val == 23
+    val = m.echo_with_default_argument_2(24)
+    assert val == 24

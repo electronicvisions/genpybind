@@ -61,6 +61,12 @@ CLASSES
      |      Create and return a new object.  See help(type) for accurate signature.
 
 FUNCTIONS
+    echo_with_default_argument(...) method of builtins.PyCapsule instance
+        echo_with_default_argument(val: int = 3) -> int
+
+    echo_with_default_argument_2(...) method of builtins.PyCapsule instance
+        echo_with_default_argument_2(val: int = 23) -> int
+
     frobnicate(...) method of builtins.PyCapsule instance
         frobnicate(*args, **kwargs)
         Overloaded function.

@@ -150,6 +150,9 @@ class Callable(Declaration):
                 # FIXME: expression sometimes includes leading "=", see
                 # https://reviews.llvm.org/D33644
                 default_value = " = {}".format(utils.strip_prefix(default_value, "="))
+            else:
+                if hasattr(self.cursor, "default_arguments"):
+                    default_value =  " = {}".format(self.cursor.default_arguments[idx])
             args.append("py::arg({name}){noconvert}{required}{value}".format(
                 name=quote(child.spelling),
                 noconvert=".noconvert()" if idx in self.noconvert else "",

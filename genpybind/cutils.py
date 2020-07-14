@@ -82,6 +82,7 @@ def fully_qualified_name(thing, parent_cursor=None):
     if thing is not cursor and cursor.referenced is not None:
         # cursor associated with token may be a type ref
         assert cursor.kind in [
+            CursorKind.PARM_DECL,
             CursorKind.TYPE_REF,
             CursorKind.DECL_REF_EXPR,
             CursorKind.NAMESPACE_REF,
@@ -107,8 +108,8 @@ def fully_qualified_name(thing, parent_cursor=None):
     return "::".join(reversed([p for p in parts if p]))
 
 
-def fully_qualified_expression(cursor):
-    # type: (Cursor) -> Text
+def fully_qualified_expression(cursor, parent_cursor=None):
+    # type: (Cursor, Optional[Cursor]) -> Text
     output = []
     current = [""]  # type: List[Union[Text, Token]]
     for token in get_tokens_with_whitespace(cursor):
@@ -126,7 +127,7 @@ def fully_qualified_expression(cursor):
     for tokens in output:
         assert tokens
         if isinstance(tokens[0], Token):
-            tokens[0] = fully_qualified_name(tokens[0])
+            tokens[0] = fully_qualified_name(tokens[0], parent_cursor)
         assert utils.is_string(tokens[0])
 
     return "".join(utils.flatten(output))
