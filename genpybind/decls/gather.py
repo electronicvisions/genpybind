@@ -63,14 +63,25 @@ def gather_declarations(cursor, default_visibility=False):
         # For function templates we explicitly request all template instantiations
         # and add them to the queue.
         if cursor.kind == CursorKind.FUNCTION_TEMPLATE:
-            for child in cursor.get_children(
-                    with_implicit=True, with_template_instantiations=True):
+
+            default_arguments = []
+
+            for child in cutils.children_by_kind(cursor, CursorKind.PARM_DECL):
+                expr = next(cutils.children_by_kind(child, cutils.EXPRESSION_KINDS), None)
+                if expr:
+                    from IPython import embed; embed()
+                    default_arguments.append(cutils.fully_qualified_expression(expr))
+
+            for child in cursor.get_children(with_implicit=True, with_template_instantiations=True):
+
                 if child.kind in [
                         CursorKind.CONSTRUCTOR,
                         CursorKind.CONVERSION_FUNCTION,
                         CursorKind.CXX_METHOD,
                         CursorKind.FUNCTION_DECL,
                 ]:
+                    if default_arguments:
+                        child.default_arguments = default_arguments
                     queue.append((parent_declarations, child, default_visibility))
             continue
 

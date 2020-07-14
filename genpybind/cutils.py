@@ -82,6 +82,7 @@ def fully_qualified_name(thing, parent_cursor=None):
     if thing is not cursor and cursor.referenced is not None:
         # cursor associated with token may be a type ref
         assert cursor.kind in [
+            CursorKind.PARM_DECL,
             CursorKind.TYPE_REF,
             CursorKind.DECL_REF_EXPR,
             CursorKind.NAMESPACE_REF,
