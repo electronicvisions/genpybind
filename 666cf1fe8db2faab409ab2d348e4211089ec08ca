@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "628f89d0_e5bd7f2d",
+        "filename": "tests/explicit_template_function.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-07-16T16:12:29Z",
+      "side": 1,
+      "message": "maybe also add the \"derived-type\" versions (i.e. copy lines and drop \u003cint\u003e)…",
+      "revId": "666cf1fe8db2faab409ab2d348e4211089ec08ca",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": true
+    }
+  ]
+}
