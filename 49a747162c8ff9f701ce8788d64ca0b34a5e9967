@@ -22,6 +22,30 @@
       "revId": "49a747162c8ff9f701ce8788d64ca0b34a5e9967",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "005dd5f9_b4d7058a",
+        "filename": "genpybind/decls/gather.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000015
+      },
+      "writtenOn": "2020-07-16T13:31:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a3bb9785_c0ae502f",
+      "range": {
+        "startLine": 72,
+        "startChar": 20,
+        "endLine": 72,
+        "endChar": 54
+      },
+      "revId": "49a747162c8ff9f701ce8788d64ca0b34a5e9967",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be",
+      "unresolved": false
     }
   ]
 }
