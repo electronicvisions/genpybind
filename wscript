@@ -57,6 +57,17 @@ def configure(cfg):
             "clangTooling",
             "clangSema",
             "clangToolingCore",
+            "LLVMBinaryFormat",
+            "LLVMBitstreamReader",
+            "LLVMCore",
+            "LLVMDemangle",
+            "LLVMFrontendOpenMP",
+            "LLVMMC",
+            "LLVMMCParser",
+            "LLVMOption",
+            "LLVMProfileData",
+            "LLVMRemarks",
+            "LLVMSupport",
         ]})
     var = "{}PATH_CLANG".format(clang_libtype.upper())
     if not cfg.env[var]:
