@@ -41,7 +41,7 @@ public:
 
   std::unique_ptr<clang::ASTConsumer>
   CreateASTConsumer(clang::CompilerInstance &, llvm::StringRef) override {
-    return llvm::make_unique<GenpybindExpandASTConsumer>();
+    return std::make_unique<GenpybindExpandASTConsumer>();
   }
 }; // ASTFrontendAction
 
