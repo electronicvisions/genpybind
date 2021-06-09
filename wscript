@@ -27,7 +27,7 @@ def configure(cfg):
         atleast_version="5.0.0",
         args="--cxxflags --ldflags --libs --system-libs",
         uselib_store="LLVM",
-        package="option support native",
+        package="all",
         msg="Checking for LLVM libraries",
     )
 

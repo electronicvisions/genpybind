@@ -1,6 +1,7 @@
 #include "GenpybindExpandASTConsumer.h"
 
 #include <clang/AST/DeclCXX.h>
+#include <clang/Basic/SourceManager.h>
 #include <clang/Sema/Sema.h>
 #include <clang/Sema/SemaDiagnostic.h>
 
