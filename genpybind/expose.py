@@ -229,7 +229,7 @@ def expose_as(
     for m, name in zip(modules, module_names):
         for f in range(len(functions)):
             if functions[f].find(m) != -1:
-                functions[f] = "auto {} = static_cast<py::module>({}.attr(\"{}\"));\n".format(
+                functions[f] = "auto {} = {}.def_submodule(\"{}\");\n".format(
                     m, var, name) + functions[f]
 
 
