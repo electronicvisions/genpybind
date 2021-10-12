@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c958b567_e90651aa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-10-12T16:14:36Z",
+      "side": 1,
+      "message": "llvm@10.0.0 switched from llvm::make_unique to std::make_unique… not sure about the other changes",
+      "range": {
+        "startLine": 7,
+        "startChar": 19,
+        "endLine": 7,
+        "endChar": 27
+      },
+      "revId": "8e2e7fe5d9efbfac01e9307c12fec1ad33ed7cd9",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    }
+  ]
+}
