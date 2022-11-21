@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3eac739_5eb4abae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2022-11-21T20:40:15Z",
+      "side": 1,
+      "message": "This functionality apparently is not supported:\n\n```\n19:20:01  \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d ERRORS \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n19:20:01  _____________________ ERROR collecting submodules_test.py ______________________\n19:20:01  ImportError while importing test module \u0027/jenkins/jenlib_workspaces_f9/bld_gerrit-genpybind.YmxkX2dlcnJpdC1nZW5weWJpbmQjOTk.x/genpybind/tests/submodules_test.py\u0027.\n19:20:01  Hint: make sure your test modules/packages have valid Python names.\n19:20:01  Traceback:\n19:20:01  /opt/spack_views/visionary-dls/lib/python3.8/importlib/__init__.py:127: in import_module\n19:20:01      return _bootstrap._gcd_import(name[level:], package, level)\n19:20:01  submodules_test.py:1: in \u003cmodule\u003e\n19:20:01      import pysubmodules as m\n19:20:01  E   ImportError: AttributeError: module \u0027pysubmodules\u0027 has no attribute \u0027nested_subsubmodule\u0027\n19:20:01  - generated xml file: /jenkins/jenlib_workspaces_f9/bld_gerrit-genpybind.YmxkX2dlcnJpdC1nZW5weWJpbmQjOTk.x/genpybind/build/tests/reports/submodules_test.xml -\n19:20:01  \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d short test summary info \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n19:20:01  ERROR submodules_test.py\n19:20:01  !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n19:20:01  1 error in 0.18s\n```",
+      "revId": "6827afde26bbb9d9ccae1addaa845ff7c5eb6ced",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    }
+  ]
+}
