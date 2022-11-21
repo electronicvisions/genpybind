@@ -9,6 +9,13 @@ def test_visible_submodule():
     obj = m.submodule_.X()
     assert "pysubmodules.submodule_.X" in repr(obj)
 
+def test_nested_submodule():
+    obj_sub = m.submodule.X()
+    assert "pysubmodules.submodule.X" in repr(obj_sub)
+
+    obj_subsub = m.submodule.subsubmodule.X()
+    assert "pysubmodules.submodule.subsubmodule.X" in repr(obj_subsub)
+
 def test_named_submodule():
     obj = m.named.X()
     assert "pysubmodules.named.X" in repr(obj)

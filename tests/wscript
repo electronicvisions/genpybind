@@ -97,11 +97,19 @@ def build(bld):
     if bld.options.update_snapshots:
         check_snapshot_command += " --update"
 
+    skipped_targets = [
+        "submodules",  # not importable, issue #4016
+    ]
+
     for node in bld.path.ant_glob("*.cpp"):
         target = os.path.splitext(node.name)[0]
         pytarget = "py{0}".format(target)
         header = node.parent.find_node("{0}.h".format(target))
         test = node.parent.find_node("{0}_test.py".format(target))
+
+        if target in skipped_targets:
+            Logs.pprint("YELLOW", "SKIPPED: Test '" + target + "' not executed.")
+            continue
 
         bld(
             target=target,
