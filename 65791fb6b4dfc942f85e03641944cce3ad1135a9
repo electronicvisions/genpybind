@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7291bbbc_f5ddd8b6",
+        "filename": "tests/expected/expose_as.py3.8.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-01T10:57:36Z",
+      "side": 1,
+      "message": "more text, some member listings, however __eq__ and stuff looks different… to be checked (when compared between 3.7 and 3.8; the diff to \"\" looks better)",
+      "revId": "65791fb6b4dfc942f85e03641944cce3ad1135a9",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ae69a95_54574e86",
+        "filename": "tests/expected/operators.py3.8.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-01T10:57:36Z",
+      "side": 1,
+      "message": "__hash__ \u003d None stuff was added",
+      "revId": "65791fb6b4dfc942f85e03641944cce3ad1135a9",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    }
+  ]
+}
