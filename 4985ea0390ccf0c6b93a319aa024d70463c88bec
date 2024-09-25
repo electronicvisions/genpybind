@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a751916_6f0a7d2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000120
+      },
+      "writtenOn": "2024-09-25T14:39:21Z",
+      "side": 1,
+      "message": "As discussed in Softie Meeting: https://openproject.bioai.eu/meetings/1231\n\nVerified here: https://jenkins.bioai.eu:11443/job/bld_nightly_genpybind/674",
+      "revId": "4985ea0390ccf0c6b93a319aa024d70463c88bec",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    }
+  ]
+}
