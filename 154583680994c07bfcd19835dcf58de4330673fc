@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9e15e09_d825b32d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-20T14:26:24Z",
+      "side": 1,
+      "message": "(btw. might be related to https://gerrit.bioai.eu:9443/gitweb?p\u003dgenpybind.git;a\u003dblob;f\u003dtests/wscript;h\u003d8c450d0aef85288faa425538c19e2174a3a2c092;hb\u003d154583680994c07bfcd19835dcf58de4330673fc;js\u003d1#l137 …)",
+      "revId": "154583680994c07bfcd19835dcf58de4330673fc",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    }
+  ]
+}
