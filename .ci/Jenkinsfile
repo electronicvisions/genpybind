@@ -13,7 +13,9 @@ try {
 			onSlurmResource([partition: "jenkins", "cpus-per-task": 8, mem: "60G"]) {
 				dir("genpybind") {
 					inSingularity(app: app) {
-						jesh "PREFIX=$PWD/install ./waf configure install"
+						jesh "./waf configure build --notests"
+						// ECM (2025-01-20): test execution seems racy :(
+						jesh "PREFIX=$PWD/install ./waf install --alltests"
 					}
 				}
 			}
