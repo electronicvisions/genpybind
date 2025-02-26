@@ -56,6 +56,7 @@ def configure(cfg):
             "clangSerialization",
             "clangTooling",
             "clangSema",
+            "clangSupport",
             "clangToolingCore",
         ]})
     var = "{}PATH_CLANG".format(clang_libtype.upper())
