@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1fd8e42_9b0c3ce5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-26T12:17:55Z",
+      "side": 1,
+      "message": "There was:\n```\n…\n[47/47] Linking build/genpybind-parse\n/mnt/spack-tests/spack_instance_v0.23.0/ebrains-spack-builds/vendor/spack/opt/spack/__spack_path_placeholder__/__spack_path_plac/linux-ubuntu22.04-x86_64/gcc-13.3.0/binutils-2.43.1-3lsnqhvfkkxrecismjf35dgimalsmc4q/bin/ld: /mnt/spack-tests/spack_instance_v0.23.0/ebrains-spack-builds/vendor/spack/opt/spack/__spack_path_placeholder__/__spack_path_plac/linux-ubuntu22.04-x86_64/gcc-13.3.0/llvm-15.0.7-uvradawlpox4vqxicnsdprj62m7ms7xm/lib/libclangSema.a(SemaRISCVVectorLookup.cpp.o): in function `(anonymous namespace)::RISCVIntrinsicManagerImpl::InitIntrinsicList()\u0027:\nSemaRISCVVectorLookup.cpp:(.text._ZN12_GLOBAL__N_125RISCVIntrinsicManagerImpl17InitIntrinsicListEv+0x10d): undefined reference to `clang::RISCV::RVVIntrinsic::computeBuiltinTypes(llvm::ArrayRef\u003cclang::RISCV::PrototypeDescriptor\u003e, bool, bool, bool, unsigned int)\u0027\n/mnt/spack-tests/spack_instance_v0.23.0/ebrains-spack-builds/vendor/spack/opt/spack/__spack_path_placeholder__/__spack_path_plac/linux-ubuntu22.04-x86_64/gcc-13.3.0/binutils-2.43.1-3lsnqhvfkkxrecismjf35dgimalsmc4q/bin/ld: SemaRISCVVectorLookup.cpp:(.text._ZN12_GLOBAL__N_125RISCVIntrinsicManagerImpl17InitIntrinsicListEv+0x142): undefined reference to `clang::RISCV::RVVIntrinsic::computeBuiltinTypes(llvm::ArrayRef\u003cclang::RISCV::PrototypeDescriptor\u003e, bool, bool, bool, unsigned int)\u0027\n/mnt/spack-tests/spack_instance_v0.23.0/ebrains-spack-builds/vendor/spack/opt/spack/__spack_path_placeholder__/__spack_path_plac/linux-ubuntu22.04-x86_64/gcc-13.3.0/binutils-2.43.1-3lsnqhvfkkxrecismjf35dgimalsmc4q/bin/ld: SemaRISCVVectorLookup.cpp:(.text._ZN12_GLOBAL__N_125RISCVIntrinsicManagerImpl17InitIntrinsicListEv+0xb50): undefined reference to `clang::RISCV::RVVType::computeTypes(clang::RISCV::BasicType, int, unsigned int, llvm::ArrayRef\u003cclang::RISCV::PrototypeDescriptor\u003e)\u0027\n/mnt/spack-tests/spack_instance_v0.23.0/ebrains-spack-builds/vendor/spack/opt/spack/__spack_path_placeholder__/__spack_path_plac/linux-ubuntu22.04-x86_64/gcc-13.3.0/binutils-2.43.1-3lsnqhvfkkxrecismjf35dgimalsmc4q/bin/ld: SemaRISCVVectorLookup.cpp:(.text._ZN12_GLOBAL__N_125RISCVIntrinsicManagerImpl17InitIntrinsicListEv+0xb8c): undefined reference to `clang::RISCV::RVVIntrinsic::getSuffixStr[abi:cxx11](clang::RISCV::BasicType, int, llvm::ArrayRef\u003cclang::RISCV::PrototypeDescriptor\u003e)\u0027\n/mnt/spack-tests/spack_instance_v0.23.0/ebrains-spack-builds/vendor/spack/opt/spack/__spack_path_placeholder__/__spack_path_plac/linux-ubuntu22.04-x86_64/gcc-13.3.0/binutils-2.43.1-3lsnqhvfkkxrecismjf35dgimalsmc4q/bin/ld: SemaRISCVVectorLookup.cpp:(.text._ZN12_GLOBAL__N_125RISCVIntrinsicManagerImpl17InitIntrinsicListEv+0xbb6): undefined reference to `clang::RISCV::RVVIntrinsic::getSuffixStr[abi:cxx11](clang::RISCV::BasicType, int, llvm::ArrayRef\u003cclang::RISCV::PrototypeDescriptor\u003e)\u0027\n/mnt/spack-tests/spack_instance_v0.23.0/ebrains-spack-builds/vendor/spack/opt/spack/__spack_path_placeholder__/__spack_path_plac/linux-ubuntu22.04-x86_64/gcc-13.3.0/binutils-2.43.1-3lsnqhvfkkxrecismjf35dgimalsmc4q/bin/ld: SemaRISCVVectorLookup.cpp:(.text._ZN12_GLOBAL__N_125RISCVIntrinsicManagerImpl17InitIntrinsicListEv+0x14db): undefined reference to `clang::RISCV::RVVType::computeTypes(clang::RISCV::BasicType, int, unsigned int, llvm::ArrayRef\u003cclang::RISCV::PrototypeDescriptor\u003e)\u0027\ncollect2: error: ld returned 1 exit status\n```\n\n→ we probably want to have this llvm version specific?",
+      "revId": "b16da6ee82f0ee4b3dda3884c2e42de080b80cbe",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    }
+  ]
+}
