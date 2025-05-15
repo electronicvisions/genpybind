@@ -1,7 +1,6 @@
 @Library("jenlib") _
 
-apps = ["visionary-dls",
-        "visionary-wafer"]
+apps = ["dls-core"]
 
 try {
 	runOnSlave(label: "frontend") {
