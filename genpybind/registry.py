@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-import collections
+from collections.abc import Mapping
 import re
 
 from clang import cindex
@@ -16,7 +16,7 @@ if False:  # pylint: disable=using-constant-test
 RE_NON_IDENTIFIER = re.compile(r"[^a-zA-Z0-9_]+")
 
 
-class Registry(collections.Mapping):
+class Registry(Mapping):
     def __init__(self, tags=None):
         # type: (Optional[Iterable[Text]]) -> None
         self._declarations = {}  # type: Dict[Text, Optional[Declaration]]
