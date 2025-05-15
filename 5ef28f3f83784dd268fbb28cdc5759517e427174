@@ -51,6 +51,24 @@
       "message": "verified by CS above",
       "revId": "5ef28f3f83784dd268fbb28cdc5759517e427174",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d37225f_28741e5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-15T12:11:30Z",
+      "side": 1,
+      "message": "I\u0027ll make it the same as my ESD upstream version → that way we won\u0027t get conflicts when the patch is applied (and tracking history better).",
+      "parentUuid": "b2acc605_758d8108",
+      "revId": "5ef28f3f83784dd268fbb28cdc5759517e427174",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
     }
   ]
 }
