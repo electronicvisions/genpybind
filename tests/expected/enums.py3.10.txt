@@ -1,0 +1,369 @@
+NAME
+    pyenums
+
+CLASSES
+    pybind11_builtins.pybind11_object(builtins.object)
+        Access
+        Color
+        ScopedButExportValues
+        State
+        UnscopedNoExport
+
+    class Access(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      Access
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __and__(...)
+     |      __and__(self: object, other: object) -> object
+     |
+     |  __eq__(...)
+     |      __eq__(self: object, other: object) -> bool
+     |
+     |  __ge__(...)
+     |      __ge__(self: object, other: object) -> bool
+     |
+     |  __getstate__(...)
+     |      __getstate__(self: object) -> int
+     |
+     |  __gt__(...)
+     |      __gt__(self: object, other: object) -> bool
+     |
+     |  __hash__(...)
+     |      __hash__(self: object) -> int
+     |
+     |  __index__(...)
+     |      __index__(self: pyenums.Access) -> int
+     |
+     |  __init__(...)
+     |      __init__(self: pyenums.Access, value: int) -> None
+     |
+     |  __int__(...)
+     |      __int__(self: pyenums.Access) -> int
+     |
+     |  __invert__(...)
+     |      __invert__(self: object) -> object
+     |
+     |  __le__(...)
+     |      __le__(self: object, other: object) -> bool
+     |
+     |  __lt__(...)
+     |      __lt__(self: object, other: object) -> bool
+     |
+     |  __ne__(...)
+     |      __ne__(self: object, other: object) -> bool
+     |
+     |  __or__(...)
+     |      __or__(self: object, other: object) -> object
+     |
+     |  __rand__(...)
+     |      __rand__(self: object, other: object) -> object
+     |
+     |  __repr__(...)
+     |      __repr__(self: object) -> str
+     |
+     |  __ror__(...)
+     |      __ror__(self: object, other: object) -> object
+     |
+     |  __rxor__(...)
+     |      __rxor__(self: object, other: object) -> object
+     |
+     |  __setstate__(...)
+     |      __setstate__(self: pyenums.Access, state: int) -> None
+     |
+     |  __str__(...)
+     |      __str__(self: object) -> str
+     |
+     |  __xor__(...)
+     |      __xor__(self: object, other: object) -> object
+     |
+     |  ----------------------------------------------------------------------
+     |  Readonly properties defined here:
+     |
+     |  __members__
+     |
+     |  name
+     |      name(self: object) -> str
+     |
+     |  value
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  Execute = <Access.Execute: 1>
+     |
+     |  Read = <Access.Read: 4>
+     |
+     |  Write = <Access.Write: 2>
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from pybind11_builtins.pybind11_object:
+     |
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+    class Color(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      Color
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(...)
+     |      __eq__(self: object, other: object) -> bool
+     |
+     |  __getstate__(...)
+     |      __getstate__(self: object) -> int
+     |
+     |  __hash__(...)
+     |      __hash__(self: object) -> int
+     |
+     |  __index__(...)
+     |      __index__(self: pyenums.Color) -> int
+     |
+     |  __init__(...)
+     |      __init__(self: pyenums.Color, value: int) -> None
+     |
+     |  __int__(...)
+     |      __int__(self: pyenums.Color) -> int
+     |
+     |  __ne__(...)
+     |      __ne__(self: object, other: object) -> bool
+     |
+     |  __repr__(...)
+     |      __repr__(self: object) -> str
+     |
+     |  __setstate__(...)
+     |      __setstate__(self: pyenums.Color, state: int) -> None
+     |
+     |  __str__(...)
+     |      __str__(self: object) -> str
+     |
+     |  ----------------------------------------------------------------------
+     |  Readonly properties defined here:
+     |
+     |  __members__
+     |
+     |  name
+     |      name(self: object) -> str
+     |
+     |  value
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  blue = <Color.blue: 2>
+     |
+     |  green = <Color.green: 1>
+     |
+     |  red = <Color.red: 0>
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from pybind11_builtins.pybind11_object:
+     |
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+    class ScopedButExportValues(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      ScopedButExportValues
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(...)
+     |      __eq__(self: object, other: object) -> bool
+     |
+     |  __getstate__(...)
+     |      __getstate__(self: object) -> int
+     |
+     |  __hash__(...)
+     |      __hash__(self: object) -> int
+     |
+     |  __index__(...)
+     |      __index__(self: pyenums.ScopedButExportValues) -> int
+     |
+     |  __init__(...)
+     |      __init__(self: pyenums.ScopedButExportValues, value: int) -> None
+     |
+     |  __int__(...)
+     |      __int__(self: pyenums.ScopedButExportValues) -> int
+     |
+     |  __ne__(...)
+     |      __ne__(self: object, other: object) -> bool
+     |
+     |  __repr__(...)
+     |      __repr__(self: object) -> str
+     |
+     |  __setstate__(...)
+     |      __setstate__(self: pyenums.ScopedButExportValues, state: int) -> None
+     |
+     |  __str__(...)
+     |      __str__(self: object) -> str
+     |
+     |  ----------------------------------------------------------------------
+     |  Readonly properties defined here:
+     |
+     |  __members__
+     |
+     |  name
+     |      name(self: object) -> str
+     |
+     |  value
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  EnumerationFromScoped = <ScopedButExportValues.EnumerationFromScoped: ...
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from pybind11_builtins.pybind11_object:
+     |
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+    class State(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      State
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(...)
+     |      __eq__(self: object, other: object) -> bool
+     |
+     |  __getstate__(...)
+     |      __getstate__(self: object) -> int
+     |
+     |  __hash__(...)
+     |      __hash__(self: object) -> int
+     |
+     |  __index__(...)
+     |      __index__(self: pyenums.State) -> int
+     |
+     |  __init__(...)
+     |      __init__(self: pyenums.State, value: int) -> None
+     |
+     |  __int__(...)
+     |      __int__(self: pyenums.State) -> int
+     |
+     |  __ne__(...)
+     |      __ne__(self: object, other: object) -> bool
+     |
+     |  __repr__(...)
+     |      __repr__(self: object) -> str
+     |
+     |  __setstate__(...)
+     |      __setstate__(self: pyenums.State, state: int) -> None
+     |
+     |  __str__(...)
+     |      __str__(self: object) -> str
+     |
+     |  ----------------------------------------------------------------------
+     |  Readonly properties defined here:
+     |
+     |  __members__
+     |
+     |  name
+     |      name(self: object) -> str
+     |
+     |  value
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  MAYBE = <State.MAYBE: 2>
+     |
+     |  NO = <State.NO: 1>
+     |
+     |  YES = <State.YES: 0>
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from pybind11_builtins.pybind11_object:
+     |
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+    class UnscopedNoExport(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      UnscopedNoExport
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |
+     |  Methods defined here:
+     |
+     |  __eq__(...)
+     |      __eq__(self: object, other: object) -> bool
+     |
+     |  __getstate__(...)
+     |      __getstate__(self: object) -> int
+     |
+     |  __hash__(...)
+     |      __hash__(self: object) -> int
+     |
+     |  __index__(...)
+     |      __index__(self: pyenums.UnscopedNoExport) -> int
+     |
+     |  __init__(...)
+     |      __init__(self: pyenums.UnscopedNoExport, value: int) -> None
+     |
+     |  __int__(...)
+     |      __int__(self: pyenums.UnscopedNoExport) -> int
+     |
+     |  __ne__(...)
+     |      __ne__(self: object, other: object) -> bool
+     |
+     |  __repr__(...)
+     |      __repr__(self: object) -> str
+     |
+     |  __setstate__(...)
+     |      __setstate__(self: pyenums.UnscopedNoExport, state: int) -> None
+     |
+     |  __str__(...)
+     |      __str__(self: object) -> str
+     |
+     |  ----------------------------------------------------------------------
+     |  Readonly properties defined here:
+     |
+     |  __members__
+     |
+     |  name
+     |      name(self: object) -> str
+     |
+     |  value
+     |
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |
+     |  EnumerationNotExported = <UnscopedNoExport.EnumerationNotExported: 0>
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from pybind11_builtins.pybind11_object:
+     |
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+FUNCTIONS
+    test_enum(...) method of builtins.PyCapsule instance
+        test_enum(*args, **kwargs)
+        Overloaded function.
+
+        1. test_enum(state: pyenums.State) -> str
+
+        2. test_enum(color: pyenums.Color) -> str
+
+DATA
+    EnumerationFromScoped = <ScopedButExportValues.EnumerationFromScoped: ...
+    Execute = <Access.Execute: 1>
+    MAYBE = <State.MAYBE: 2>
+    NO = <State.NO: 1>
+    Read = <Access.Read: 4>
+    Write = <Access.Write: 2>
+    YES = <State.YES: 0>
+
