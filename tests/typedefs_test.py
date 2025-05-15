@@ -4,7 +4,7 @@ import pytest
 @pytest.fixture(scope="session")
 def module_with_warnings():
     """Capture warnings when importing the module for use in tests below."""
-    with pytest.warns(None) as recorder:
+    with pytest.warns(Warning) as recorder:
         import pytypedefs as m  # pylint: disable=import-outside-toplevel
     yield m, recorder
     # Check that there were no unexpected warnings (see use of `.pop()` below).
