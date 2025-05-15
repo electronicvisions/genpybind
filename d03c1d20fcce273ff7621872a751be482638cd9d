@@ -22,6 +22,30 @@
       },
       "revId": "d03c1d20fcce273ff7621872a751be482638cd9d",
       "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf580566_7a0677f5",
+        "filename": "tests/typedefs_test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000146
+      },
+      "writtenOn": "2025-05-15T12:20:38Z",
+      "side": 1,
+      "message": "it\u0027s a builtin exception",
+      "parentUuid": "79e471f3_e696108e",
+      "range": {
+        "startLine": 7,
+        "startChar": 22,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "d03c1d20fcce273ff7621872a751be482638cd9d",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
     }
   ]
 }
