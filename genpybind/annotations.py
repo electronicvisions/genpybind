@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 import ast
-import collections
+import collections.abc
 
 from clang.cindex import CursorKind
 
@@ -25,7 +25,7 @@ LOZENGE = u"◊"
 SPECIAL_NAMES = {"true": True, "false": False, "default": None, "none": None}
 
 
-class Annotations(collections.Sequence):
+class Annotations(collections.abc.Sequence):
     def __init__(self, annotations=None):
         # type: (Union[None, Text, Iterable[Text]]) -> None
         self._annotations = []  # type: List[AnnotationT]
