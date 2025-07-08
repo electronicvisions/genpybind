@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "277d4fe4_32654eac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2025-07-08T09:11:29Z",
+      "side": 1,
+      "message": "Update to python@3.11 required several changes. I wanted to keep them separate. c/25030 is the latest change which fixes all issues and is verified.",
+      "revId": "2185f90c5377751bb260a684c5182364a02dc0a4",
+      "serverId": "c2b3b047-db74-4e11-9867-db9f835653be"
+    }
+  ]
+}
