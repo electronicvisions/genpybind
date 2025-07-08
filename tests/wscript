@@ -15,6 +15,11 @@ def options(opt):
     opt.load("pytest")
 
     opt.add_option(
+        "--execute-snapshots-test", action="store_true", default=False,
+        help="Execute snapshot tests.",
+    )
+
+    opt.add_option(
         "--update-snapshots", action="store_true", default=False,
         help="Update snapshot artifacts for record/replay tests",
     )
@@ -144,7 +149,7 @@ def build(bld):
             ut_str="${PYTEST} -q ${SRC} " + junit_option(test),
         )
 
-        if sys.version_info.major > 2:
+        if bld.options.update_snapshots and sys.version_info.major > 2:
             # There can optionally be a version-dependent snapshot file.
             snapshot = node.parent.find_node(
                 "expected/{0}.py{1}.txt".format(target, bld.env.PYTHON_VERSION)
@@ -159,6 +164,9 @@ def build(bld):
                 run_after=run_after,
                 ut_str=check_snapshot_command,
             )
+        elif not bld.options.update_snapshots:
+            Logs.pprint('YELLOW', "WARNING: snapshot tests are skipped. "
+                "Use the `--execute-snapshots-test` to run them.")
         else:
             Logs.pprint('RED', "WARNING: snapshot tests are skipped for python2.")
 
