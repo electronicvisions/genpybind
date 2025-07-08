@@ -24,5 +24,5 @@ def test_readonly_property():
     assert obj.readonly is True
     assert not hasattr(obj, "computed")
 
-    with pytest.raises(AttributeError, match="can't set attribute"):
+    with pytest.raises(AttributeError, match="can't set attribute|has no setter"):
         obj.readonly = 5

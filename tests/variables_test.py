@@ -12,25 +12,25 @@ def test_static_field(tagdecl):
 @pytest.mark.parametrize("tagdecl", TAGDECLS)
 def test_static_const_field(tagdecl):
     assert tagdecl.static_const_field == 2
-    with pytest.raises(AttributeError, match="can't set attribute"):
+    with pytest.raises(AttributeError, match="can't set attribute|has no setter"):
         tagdecl.static_const_field = -1
 
 @pytest.mark.parametrize("tagdecl", TAGDECLS)
 def test_static_constexpr_field(tagdecl):
     assert tagdecl.static_constexpr_field == 3
-    with pytest.raises(AttributeError, match="can't set attribute"):
+    with pytest.raises(AttributeError, match="can't set attribute|has no setter"):
         tagdecl.static_constexpr_field = -1
 
 @pytest.mark.parametrize("tagdecl", TAGDECLS)
 def test_static_readonly_field(tagdecl):
     assert tagdecl.static_readonly_field == 4
-    with pytest.raises(AttributeError, match="can't set attribute"):
+    with pytest.raises(AttributeError, match="can't set attribute|has no setter"):
         tagdecl.static_readonly_field = -1
 
 @pytest.mark.parametrize("tagdecl", TAGDECLS)
 def test_static_writable_false_field(tagdecl):
     assert tagdecl.static_writable_false_field == 5
-    with pytest.raises(AttributeError, match="can't set attribute"):
+    with pytest.raises(AttributeError, match="can't set attribute|has no setter"):
         tagdecl.static_writable_false_field = -1
 
 @pytest.mark.parametrize("tagdecl", TAGDECLS)
@@ -44,21 +44,21 @@ def test_field(tagdecl):
 def test_const_field(tagdecl):
     obj = tagdecl()
     assert obj.const_field == 2
-    with pytest.raises(AttributeError, match="can't set attribute"):
+    with pytest.raises(AttributeError, match="can't set attribute|has no setter"):
         obj.const_field = -1
 
 @pytest.mark.parametrize("tagdecl", TAGDECLS)
 def test_readonly_field(tagdecl):
     obj = tagdecl()
     assert obj.readonly_field == 4
-    with pytest.raises(AttributeError, match="can't set attribute"):
+    with pytest.raises(AttributeError, match="can't set attribute|has no setter"):
         obj.readonly_field = -1
 
 @pytest.mark.parametrize("tagdecl", TAGDECLS)
 def test_writable_false_field(tagdecl):
     obj = tagdecl()
     assert obj.writable_false_field == 5
-    with pytest.raises(AttributeError, match="can't set attribute"):
+    with pytest.raises(AttributeError, match="can't set attribute|has no setter"):
         obj.writable_false_field = -1
 
 def test_global_variables():
@@ -69,5 +69,5 @@ def test_global_variables():
 
 @pytest.mark.xfail(reason="not enforceable")
 def test_global_const_variable_is_readonly():
-    with pytest.raises(AttributeError, match="can't set attribute"):
+    with pytest.raises(AttributeError, match="can't set attribute|has no setter"):
         m.const_var = -1
